@@ -1,19 +1,67 @@
-# React + Vite
+# Helpdesk — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend em React + Vite + Tailwind CSS para o protótipo do sistema de Helpdesk, integrado à API REST do backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Como Executar
 
-## React Compiler
+### Pré-requisitos
+- Node.js 18+ (recomendado Node 20+)
+- Backend em execução na porta `3000`
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Instalação
+```bash
+cd frontend
+npm install
+```
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+### Modo de Desenvolvimento
+```bash
+npm run dev
+```
+A aplicação iniciará em `http://localhost:5173`. As chamadas à `/api` são automaticamente encaminhadas via proxy para `http://localhost:3000`.
 
-## Expanding the ESLint configuration
+### Verificação de Linting
+```bash
+npm run lint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Build de Produção
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 👥 Contas de Teste (Base Seed)
+
+| Perfil | E-mail | Senha |
+|---|---|---|
+| **Solicitante** | `ana.souza@helpdesk.com` | `123456` |
+| **Solicitante** | `bruno.lima@helpdesk.com` | `123456` |
+| **Técnico** | `diego.ramos@helpdesk.com` | `123456` |
+| **Técnico** | `elisa.prado@helpdesk.com` | `123456` |
+
+---
+
+## 📁 Estrutura de Diretórios
+
+```
+frontend/
+├── src/
+│   ├── assets/             # Imagens e ícones estáticos
+│   ├── components/         # Componentes compartilhados (Navbar, FormLogin, StatusBadge, ProtectedRoute)
+│   ├── contexts/           # Contextos React (AuthContext, ToastContext)
+│   ├── hooks/              # Custom hooks (useAuth, useToast)
+│   ├── pages/              # Páginas (LoginPage, DashboardPage, TicketsPage, SupportPage)
+│   ├── services/           # Cliente de API centralizado (fetch com tratamento de token e erros)
+│   ├── utils/              # Funções utilitárias (sorting com Merge Sort, formatação/validação de datas)
+│   ├── App.jsx             # Definição das rotas e layouts
+│   ├── index.css           # Estilos globais e Tailwind v4
+│   └── main.jsx            # Ponto de entrada React
+├── vite.config.js          # Configuração do Vite com proxy para /api
+├── eslint.config.js        # Configuração ESLint
+└── package.json
+```
