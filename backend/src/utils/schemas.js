@@ -36,6 +36,17 @@ export const loginSchema = z.object({
         .min(1, { error: "A senha é obrigatória" }),
 });
 
+export const registerSchema = z.object({
+    name: requiredText("O nome é obrigatório", 100),
+    email: requiredText("O e-mail é obrigatório", 150).pipe(
+        z.email({ error: "Informe um e-mail válido" })
+    ),
+    password: z
+        .string({ error: "A senha é obrigatória" })
+        .min(6, { error: "A senha deve ter no mínimo 6 caracteres" })
+        .max(72, { error: "A senha deve ter no máximo 72 caracteres" }),
+});
+
 export const ticketSchema = z.object({
     subject: requiredText("O assunto é obrigatório", 150),
     description: requiredText("A descrição é obrigatória", 5000),
