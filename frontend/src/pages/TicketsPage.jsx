@@ -104,11 +104,14 @@ export default function TicketsPage() {
           }
         } catch (err) {
           if (isMounted) showError(err.message || 'Erro ao carregar detalhes do chamado.')
+        } finally {
+          if (isMounted) {
+            searchParams.delete('ver')
+            setSearchParams(searchParams, { replace: true })
+          }
         }
       }
       loadVerTicket()
-      searchParams.delete('ver')
-      setSearchParams(searchParams, { replace: true })
     } else if (novoParam) {
       searchParams.delete('novo')
       setSearchParams(searchParams, { replace: true })

@@ -45,12 +45,12 @@ CREATE TABLE historico_atendimentos (
 );
 
 INSERT INTO usuarios (nome, email, senha_hash, perfil) VALUES
-('Ana Souza', 'ana.souza@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Solicitante'),
-('Bruno Lima', 'bruno.lima@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Solicitante'),
-('Carla Mendes', 'carla.mendes@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Solicitante'),
-('Diego Ramos', 'diego.ramos@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Técnico'),
-('Elisa Prado', 'elisa.prado@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Técnico'),
-('Fábio Costa', 'fabio.costa@helpdesk.com', '$2b$10$HNI426/MN8lKDiqZvh6CWeF2VHpmEMpJGFQ2B4YMkk3PwLEeXmyZq', 'Técnico');
+('Ana Souza', 'ana.souza@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Solicitante'),
+('Bruno Lima', 'bruno.lima@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Solicitante'),
+('Carla Mendes', 'carla.mendes@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Solicitante'),
+('Diego Ramos', 'diego.ramos@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Técnico'),
+('Elisa Prado', 'elisa.prado@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Técnico'),
+('Fábio Costa', 'fabio.costa@helpdesk.com', '$2b$10$QgkwtX3DOhQd8vlifs3UbuLsp2daVR0xqc038Zgg/NkB3Mt58QWDC', 'Técnico');
 
 INSERT INTO categorias (nome, descricao) VALUES
 ('Hardware', 'Problemas com equipamentos físicos, como computadores, impressoras e periféricos'),
